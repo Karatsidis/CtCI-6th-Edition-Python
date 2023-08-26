@@ -2,7 +2,7 @@ import time
 import unittest
 
 
-def compress_string(string):
+def compress_string(string: str) -> str:
     compressed = []
     counter = 0
 

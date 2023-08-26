@@ -2,7 +2,7 @@
 import unittest
 
 
-def urlify_algo(string, length):
+def urlify_algo(string: str, length: int) -> str:
     """replace spaces with %20 and removes trailing spaces"""
     # convert to list because Python strings are immutable
     char_list = list(string)
@@ -21,7 +21,7 @@ def urlify_algo(string, length):
     return "".join(char_list[new_index:])
 
 
-def urlify_pythonic(text, length):
+def urlify_pythonic(text: str, length: int) -> str:
     """solution using standard library"""
     return text[:length].replace(" ", "%20")
 
