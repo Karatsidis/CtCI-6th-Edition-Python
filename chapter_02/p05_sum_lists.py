@@ -1,7 +1,7 @@
 from chapter_02.linked_list import LinkedList
 
 
-def sum_lists(ll_a, ll_b):
+def sum_lists(ll_a: LinkedList, ll_b: LinkedList) -> LinkedList:
     n1, n2 = ll_a.head, ll_b.head
     ll = NumericLinkedList()
     carry = 0

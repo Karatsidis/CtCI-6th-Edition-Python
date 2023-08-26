@@ -1,7 +1,7 @@
 from chapter_02.linked_list import LinkedList
 
 
-def partition(ll, x):
+def partition(ll: LinkedList, x: int) -> LinkedList:
     current = ll.tail = ll.head
 
     while current:
@@ -57,7 +57,7 @@ def test_lr_partition():
         assert is_partitioned(ll, x=x), f"{partition_func} did not partition"
 
 
-def is_partitioned(ll, x):
+def is_partitioned(ll: LinkedList, x: int) -> bool:
     seen_gt_partition = False
     for node in ll:
         if node.value >= x:

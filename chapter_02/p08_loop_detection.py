@@ -1,7 +1,8 @@
-from chapter_02.linked_list import LinkedList
+from chapter_02.linked_list import LinkedList, LinkedListNode
+from typing import Union
 
 
-def loop_detection(ll):
+def loop_detection(ll: LinkedList) -> Union[LinkedListNode, None]:
     fast = slow = ll.head
 
     while fast and fast.next:

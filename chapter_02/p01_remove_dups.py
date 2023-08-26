@@ -3,7 +3,7 @@ import time
 from chapter_02.linked_list import LinkedList
 
 
-def remove_dups(ll):
+def remove_dups(ll: LinkedList) -> LinkedList:
     current = ll.head
     previous = None
     seen = set()
@@ -19,7 +19,7 @@ def remove_dups(ll):
     return ll
 
 
-def remove_dups_followup(ll):
+def remove_dups_followup(ll: LinkedList) -> LinkedList:
     runner = current = ll.head
     while current:
         runner = current

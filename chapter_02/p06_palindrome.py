@@ -1,9 +1,10 @@
 import time
 
-from chapter_02.linked_list import LinkedList
+from chapter_02.linked_list import LinkedList, LinkedListNode
+from typing import Tuple
 
 
-def is_palindrome(ll):
+def is_palindrome(ll: LinkedList) -> bool:
     fast = slow = ll.head
     stack = []
 
@@ -26,7 +27,7 @@ def is_palindrome(ll):
     return True
 
 
-def is_palindrome_constant_space(ll):
+def is_palindrome_constant_space(ll: LinkedList) -> bool:
     """
     Constant(O(1)) space solution
     """
@@ -59,7 +60,7 @@ def is_palindrome_constant_space(ll):
     return result
 
 
-def reverse(node):
+def reverse(node: LinkedListNode) -> LinkedListNode:
     """
     reverses a linked list,
     returns the input list's
@@ -80,14 +81,14 @@ def reverse(node):
     return previous_node
 
 
-def is_palindrome_recursive(ll):
+def is_palindrome_recursive(ll: LinkedList) -> Tuple[bool, LinkedListNode]:
     def get_len(node):
         if not node:
             return 0
         else:
             return 1 + get_len(node.next)
 
-    def recursive_transverse(node, length):
+    def recursive_transverse(node: LinkedListNode, length: int) -> Tuple[bool, LinkedListNode]:
         if not node or length == 0:  # even list
             return True, node
         elif length == 1:  # odd list

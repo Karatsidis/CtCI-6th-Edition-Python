@@ -1,8 +1,9 @@
 import random
+from typing import Any, List
 
 
 class LinkedListNode:
-    def __init__(self, value, next_node=None, prev_node=None):
+    def __init__(self, value: Any, next_node=None, prev_node=None):
         self.value = value
         self.next = next_node
         self.prev = prev_node
@@ -39,7 +40,7 @@ class LinkedList:
     def values(self):
         return [x.value for x in self]
 
-    def add(self, value):
+    def add(self, value: Any):
         if self.head is None:
             self.tail = self.head = LinkedListNode(value)
         else:
@@ -47,24 +48,24 @@ class LinkedList:
             self.tail = self.tail.next
         return self.tail
 
-    def add_to_beginning(self, value):
+    def add_to_beginning(self, value: Any):
         if self.head is None:
             self.tail = self.head = LinkedListNode(value)
         else:
             self.head = LinkedListNode(value, self.head)
         return self.head
 
-    def add_multiple(self, values):
+    def add_multiple(self, values: List[Any]):
         for v in values:
             self.add(v)
 
     @classmethod
-    def generate(cls, k, min_value, max_value):
+    def generate(cls, k: int, min_value: int, max_value: int):
         return cls(random.choices(range(min_value, max_value), k=k))
 
 
 class DoublyLinkedList(LinkedList):
-    def add(self, value):
+    def add(self, value: Any):
         if self.head is None:
             self.tail = self.head = LinkedListNode(value)
         else:

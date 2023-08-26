@@ -1,7 +1,7 @@
 from chapter_02.linked_list import LinkedList
 
 
-def kth_to_last(ll, k):
+def kth_to_last(ll: LinkedList, k: int):
     leader = follower = ll.head
     count = 0
 
@@ -14,7 +14,7 @@ def kth_to_last(ll, k):
 
 
 # O(N) space
-def kth_last_recursive(ll, k):
+def kth_last_recursive(ll: LinkedList, k: int):
     head = ll.head
     counter = 0
 

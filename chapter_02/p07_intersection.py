@@ -1,7 +1,8 @@
-from chapter_02.linked_list import LinkedList
+from chapter_02.linked_list import LinkedList, LinkedListNode
+from typing import Union
 
 
-def intersection(list1, list2):
+def intersection(list1: LinkedList, list2: LinkedList) -> Union[LinkedListNode, bool]:
     if list1.tail is not list2.tail:
         return False
 

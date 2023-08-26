@@ -1,7 +1,7 @@
-from chapter_02.linked_list import LinkedList
+from chapter_02.linked_list import LinkedList, LinkedListNode
 
 
-def delete_middle_node(node):
+def delete_middle_node(node: LinkedListNode):
     node.value = node.next.value
     node.next = node.next.next
 
