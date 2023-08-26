@@ -48,3 +48,8 @@ def test_impossible_build_order():
     dependencies = [("a", "b"), ("b", "a")]
     with pytest.raises(NoValidBuildOrderError):
         determine_build_order(projects, dependencies)
+
+
+if __name__ == "__main__":
+    test_determine_build_order()
+    test_impossible_build_order()

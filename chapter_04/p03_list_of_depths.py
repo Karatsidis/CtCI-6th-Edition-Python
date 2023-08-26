@@ -87,4 +87,4 @@ def example():
 
 
 if __name__ == "__main__":
-    example()
+    test_create_node_list_by_depth()
