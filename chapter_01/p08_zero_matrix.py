@@ -36,7 +36,6 @@ def zero_matrix_pythonic(matrix: List[List[int]]) -> List[List[int]]:
 
 
 class Test(unittest.TestCase):
-
     test_cases = [
         (
             [

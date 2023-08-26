@@ -25,7 +25,6 @@ def min_window(big_array, small_array):
         frequencies[char] -= 1
 
         if missing == 0:
-
             while left <= right and missing == 0:
                 if right - left + 1 < min_win_len:
                     min_win_len = right - left + 1

@@ -88,7 +88,9 @@ def is_palindrome_recursive(ll: LinkedList) -> Tuple[bool, LinkedListNode]:
         else:
             return 1 + get_len(node.next)
 
-    def recursive_transverse(node: LinkedListNode, length: int) -> Tuple[bool, LinkedListNode]:
+    def recursive_transverse(
+        node: LinkedListNode, length: int
+    ) -> Tuple[bool, LinkedListNode]:
         if not node or length == 0:  # even list
             return True, node
         elif length == 1:  # odd list

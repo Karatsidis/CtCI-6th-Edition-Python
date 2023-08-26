@@ -4,6 +4,7 @@ import unittest
 from collections import Counter
 from typing import List
 
+
 def clean_phrase(phrase: str) -> List[str]:
     return [c for c in phrase.lower() if c in string.ascii_lowercase]
 

@@ -73,7 +73,6 @@ class Test(unittest.TestCase):
     testable_functions = [are_one_edit_different]
 
     def test_one_away(self):
-
         for f in self.testable_functions:
             start = time.perf_counter()
             for _ in range(100):

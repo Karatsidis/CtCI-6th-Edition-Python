@@ -50,7 +50,6 @@ class BinarySearchTree:
                 current = current.right
 
     def delete_helper(self, node, key):
-
         if node is None:
             return node
 

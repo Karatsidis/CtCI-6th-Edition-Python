@@ -1,5 +1,6 @@
 # Write a method to compute all permutations of a string of unique characters
 
+
 # approach 1: building from permutations of first n-1 characters
 def get_perms(string):
     permutations = []

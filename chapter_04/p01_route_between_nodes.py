@@ -72,7 +72,6 @@ def is_route_bidirectional(graph, start, end):
 
 
 class Test(unittest.TestCase):
-
     graph = {
         "A": ["B", "C"],
         "B": ["D"],
