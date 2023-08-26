@@ -1,9 +1,10 @@
 # O(MxN)
 import unittest
 from copy import deepcopy
+from typing import List
 
 
-def zero_matrix(matrix):
+def zero_matrix(matrix: List[List[int]]) -> List[List[int]]:
     m = len(matrix)
     n = len(matrix[0])
     rows = set()
@@ -23,7 +24,7 @@ def zero_matrix(matrix):
     return matrix
 
 
-def zero_matrix_pythonic(matrix):
+def zero_matrix_pythonic(matrix: List[List[int]]) -> List[List[int]]:
     matrix = [["X" if x == 0 else x for x in row] for row in matrix]
     indices = []
     for idx, row in enumerate(matrix):

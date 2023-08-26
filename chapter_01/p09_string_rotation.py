@@ -2,7 +2,7 @@
 import unittest
 
 
-def string_rotation(s1, s2):
+def string_rotation(s1: str, s2: str):
     if len(s1) == len(s2) != 0:
         return s2 in s1 * 2
     return False

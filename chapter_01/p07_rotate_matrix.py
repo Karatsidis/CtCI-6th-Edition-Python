@@ -1,9 +1,10 @@
 # O(NxN)
 import unittest
 from copy import deepcopy
+from typing import List
 
 
-def rotate_matrix(matrix):
+def rotate_matrix(matrix: List[List[int]]) -> List[List[int]]:
     """rotates a matrix 90 degrees clockwise"""
     n = len(matrix)
     for layer in range(n // 2):
@@ -26,7 +27,7 @@ def rotate_matrix(matrix):
     return matrix
 
 
-def rotate_matrix_double_swap(matrix):
+def rotate_matrix_double_swap(matrix: List[List[int]]) -> List[List[int]]:
     n = len(matrix)
     for i in range(n):
         for j in range(i, n):
@@ -42,7 +43,7 @@ def rotate_matrix_double_swap(matrix):
     return matrix
 
 
-def rotate_matrix_pythonic(matrix):
+def rotate_matrix_pythonic(matrix: List[List[int]]) -> List[List[int]]:
     """rotates a matrix 90 degrees clockwise"""
     n = len(matrix)
     result = [[0] * n for i in range(n)]  # empty list of 0s
@@ -52,7 +53,7 @@ def rotate_matrix_pythonic(matrix):
     return result
 
 
-def rotate_matrix_pythonic_alternate(matrix):
+def rotate_matrix_pythonic_alternate(matrix: List[List[int]]) -> List[List[int]]:
     """rotates a matrix 90 degrees clockwise"""
     return [list(reversed(row)) for row in zip(*matrix)]
 
