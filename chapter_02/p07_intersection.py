@@ -37,3 +37,7 @@ def test_linked_list_intersection():
 
     # should be 1
     assert intersection(a, b).value == 1
+
+
+if __name__ == "__main__":
+    test_linked_list_intersection()

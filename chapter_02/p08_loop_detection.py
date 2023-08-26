@@ -34,3 +34,7 @@ def test_loop_detection():
 
     for ll, expected in tests:
         assert loop_detection(ll) == expected
+
+
+if __name__ == "__main__":
+    test_loop_detection()
