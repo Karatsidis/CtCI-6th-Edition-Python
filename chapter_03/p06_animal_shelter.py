@@ -94,3 +94,7 @@ def test_enqueue():
     animal_shelter.enqueue(Dog("Sparky"))
     animal_shelter.enqueue(Cat("Sneezy"))
     assert animal_shelter.size() == 3
+
+
+if __name__ == "__main__":
+    test_enqueue()

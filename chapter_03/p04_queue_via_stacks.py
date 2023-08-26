@@ -110,3 +110,7 @@ class Tests(unittest.TestCase):
         assert q.remove() == 6
         assert len(q) == 0
         assert not q.remove()
+
+
+if __name__ == "__main__":
+    unittest.main()
